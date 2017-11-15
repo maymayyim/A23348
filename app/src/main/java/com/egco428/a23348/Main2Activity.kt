@@ -25,19 +25,6 @@ class Main2Activity : AppCompatActivity() {
         button2.setOnClickListener {
             finish()
         }
-
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean
-    {
-        when (item.itemId) {
-            android.R.id.home -> {
-                finish()
-                return true
-            }
-        }
-
-        return super.onOptionsItemSelected(item)
     }
 
     fun randomNum(){

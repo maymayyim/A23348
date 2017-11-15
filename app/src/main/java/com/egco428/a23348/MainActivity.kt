@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             val intent = Intent(this, Main2Activity::class.java)
             intent.putExtra("rand", rand)
             startActivity(intent)
+            shuffled(false)
         }
     }
 
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
         val accel = (x * x + y * y + z * z) / (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH)
         val actualTime = System.currentTimeMillis()
-        if (accel >= 2)
+        if (accel >= 5)
         //
         {
             if (actualTime - lastUpdate < 200) {
